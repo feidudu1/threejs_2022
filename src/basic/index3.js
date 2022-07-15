@@ -3,7 +3,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 /**
  * 渲染黄色正方体
- * 新增：添加轨道控制器，使可以用鼠标拖动物体
+ * 添加轨道控制器，使可以用鼠标拖动物体
  */
 
 // 创建场景
