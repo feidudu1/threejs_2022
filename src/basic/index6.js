@@ -60,16 +60,12 @@ const clock = new THREE.Clock()
 
 function render() {
   // 获取时钟运行的总时长
-  let time = clock.getElapsedTime()
+  // let time = clock.getElapsedTime()
   // 两次获取时间（time 和 deltaTime）的间隔时间
-  // let deltaTime = clock.getDelta()
-  const t = time % 5
+  let deltaTime = clock.getDelta()
+  const t = deltaTime % 5
   cube.position.x = t * 1 // 每单位时间移动一个，速度为1。t最大为4.99999……
-  /** 
-   * 即使cube.position.x不可能大于5，方块也会自动回到原点？而且打印出来的值最大为4.9999……
-   * 而且设置5比4，首尾动画更顺滑
-  */
-  if (cube.position.x > 5) {
+  if (cube.position.x > 5) { // 即使cube.position.x不可能大于5，方块也会自动回到原点？而且打印出来的值最大为4.9999……
     // console.log(cube.position.x)
     cube.position.x = 0
   }
